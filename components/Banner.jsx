@@ -25,7 +25,7 @@ export default function Banner({ to, onOpen }) {
 
   return (
     <div
-      className={`fixed top-0 right-0 bottom-0 left-0 transition opacity-100 ${
+      className={`fixed z-50 top-0 right-0 bottom-0 left-0 transition ${
         isHide ? "hidden" : "block"
       } ${isShow ? "opacity-100" : "opacity-0"}`}
     >
