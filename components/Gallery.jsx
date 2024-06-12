@@ -17,6 +17,8 @@ import { Grand_Hotel, Parisienne } from "next/font/google";
 const parisienne = Parisienne({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 const grandHotel = Grand_Hotel({
   subsets: ["latin"],

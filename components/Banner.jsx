@@ -6,7 +6,12 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-const alexBrush = Alex_Brush({ subsets: ["latin"], weight: ["400"] });
+const alexBrush = Alex_Brush({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 const cormorant = Cormorant({ subsets: ["latin"] });
 export default function Banner({ to, onOpen }) {
   const [isShow, setIsShow] = useState(true);
