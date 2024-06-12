@@ -29,6 +29,8 @@ const parisienne = Parisienne({
 const vollkorn = Vollkorn_SC({
   subsets: ["latin"],
   weight: ["400", "600", "700", "900"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 const poppins = Poppins({
   subsets: ["latin"],
