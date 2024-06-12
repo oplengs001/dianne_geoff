@@ -1,7 +1,11 @@
 import { Cormorant } from "next/font/google";
 import { useEffect, useState } from "react";
 
-const cormorant = Cormorant({ subsets: ["latin"] });
+const cormorant = Cormorant({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 export default function NavMenu() {
   const [menu, setMenu] = useState("home");
