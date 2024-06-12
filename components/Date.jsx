@@ -10,6 +10,8 @@ import Image from "next/image";
 const grandHotel = Grand_Hotel({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const parisienne = Parisienne({

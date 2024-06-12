@@ -11,6 +11,8 @@ import GiftConfirmationSheet from "./GiftConfirmationSheet";
 const grandHotel = Grand_Hotel({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 const parisienne = Parisienne({
   subsets: ["latin"],

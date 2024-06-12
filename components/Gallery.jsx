@@ -23,6 +23,8 @@ const parisienne = Parisienne({
 const grandHotel = Grand_Hotel({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export default function Gallery() {
