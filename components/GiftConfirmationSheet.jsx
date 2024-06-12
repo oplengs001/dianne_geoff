@@ -23,7 +23,7 @@ export default function GiftConfirmationSheet() {
           "X-Spreadsheet-Id": "12JPFimibUXdUbMIrwf20fNmHYoM7RGAPhYA0kBfqPxY",
           "Content-Type": "application/json",
         },
-      }
+      },
     );
   };
 
@@ -85,7 +85,7 @@ export default function GiftConfirmationSheet() {
               name="name"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Nama Anda"
+              placeholder="Name"
               className="w-full px-2 py-1 mb-4 text-black bg-white border border-gray-200 rounded-lg drop-shadow-xl active:border-primary-900"
               required
             />

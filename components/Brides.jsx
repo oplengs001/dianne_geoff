@@ -6,7 +6,12 @@ import {
   Alex_Brush,
 } from "next/font/google";
 import Image from "next/image";
-const alexBrush = Alex_Brush({ subsets: ["latin"], weight: ["400"] });
+const alexBrush = Alex_Brush({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 const grandHotel = Grand_Hotel({
   subsets: ["latin"],
@@ -16,6 +21,8 @@ const grandHotel = Grand_Hotel({
 const parisienne = Parisienne({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 const vollkorn = Vollkorn_SC({
   subsets: ["latin"],

@@ -2,7 +2,12 @@ import "add-to-calendar-button";
 
 import Image from "next/image";
 import { Poppins, Alex_Brush } from "next/font/google";
-const alexBrush = Alex_Brush({ subsets: ["latin"], weight: ["400"] });
+const alexBrush = Alex_Brush({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 const poppins = Poppins({
   subsets: ["latin"],

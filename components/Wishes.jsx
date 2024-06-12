@@ -5,7 +5,12 @@ import Image from "next/image";
 import { useState } from "react";
 import { isError, useMutation, useQuery, useQueryClient } from "react-query";
 import { toast } from "react-toastify";
-const alexBrush = Alex_Brush({ subsets: ["latin"], weight: ["400"] });
+const alexBrush = Alex_Brush({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 const grandHotel = Grand_Hotel({
   subsets: ["latin"],
@@ -14,6 +19,8 @@ const grandHotel = Grand_Hotel({
 const parisienne = Parisienne({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 const poppins = Poppins({
   subsets: ["latin"],

@@ -15,6 +15,8 @@ const grandHotel = Grand_Hotel({
 const parisienne = Parisienne({
   subsets: ["latin"],
   weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 const vollkorn = Vollkorn_SC({

@@ -10,7 +10,12 @@ const poppins = Poppins({
   style: ["normal", "italic"],
 });
 const cormorant = Cormorant({ subsets: ["latin"] });
-const alexBrush = Alex_Brush({ subsets: ["latin"], weight: ["400"] });
+const alexBrush = Alex_Brush({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 
 export default function Cover() {
   return (
