@@ -14,14 +14,18 @@ const alexBrush = Alex_Brush({
   display: "swap",
   adjustFontFallback: false,
 });
-const cormorant = Cormorant({ subsets: ["latin"] });
+const cormorant = Cormorant({
+  subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: false,
+});
 export default function Banner({ to, onOpen }) {
   const [isShow, setIsShow] = useState(true);
   const [isHide, setIsHide] = useState(false);
 
   return (
     <div
-      className={`fixed z-50 top-0 right-0 bottom-0 left-0 transition ${
+      className={`fixed top-0 right-0 bottom-0 left-0 transition opacity-100 ${
         isHide ? "hidden" : "block"
       } ${isShow ? "opacity-100" : "opacity-0"}`}
     >
@@ -34,7 +38,7 @@ export default function Banner({ to, onOpen }) {
           data-aos="fade"
           className={`text-white text-5xl text-center mt-5 ${alexBrush.className}`}
         >
-          Geoff & Dianne
+          Dianne & Geoff
         </h1>
         <p
           data-aos="fade"

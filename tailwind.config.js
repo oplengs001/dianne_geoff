@@ -14,7 +14,7 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "cover-hero": "url('/img/bg-cover.jpg')",
-        "cover-welcome": "url('/img/bg-welcome.GIF')",
+        "cover-welcome": "url('/img/bg-welcome.gif')",
         "cover-end": "url('/img/bg-end.jpg')",
         "cover-dates": "url('/img/dates.jpg')",
         "card-ovi": "url('/img/bg-ovi.png')",
