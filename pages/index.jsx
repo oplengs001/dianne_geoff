@@ -80,15 +80,15 @@ export default function Home() {
           name="description"
           content="Kami memohon doa restu dari Bapak/Ibu/Saudara/(i)"
         /> */}
-        <meta property="og:title" content="Ofi & Wildan - Ajakanonline.com" />
+        <meta property="og:title" content="Geoffrey & Dianne - dianne-geoff.vercel.app" />
         <meta
           property="og:url"
-          content="https://wedding-ofi-wildan.ajakanonline.com/"
+          content="httdianne-geoff.vercel.app"
         />
         {/* <meta property="og:description" content="Kami memohon doa restu dari Bapak/Ibu/Saudara/(i)" /> */}
         <meta
           property="og:image"
-          content="https://wildan-ofi-wedding.vercel.app/img/thumb.jpg"
+          content="blob:https://www.facebook.com/568fd9df-4b64-4194-8972-c317df79c015"
         />
         <meta property="og:type" content="article" />
       </Head>
