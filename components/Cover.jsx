@@ -3,7 +3,7 @@ import "add-to-calendar-button";
 import Image from "next/image";
 import { Cormorant, Alex_Brush, Poppins } from "next/font/google";
 import CountdownTimer from "./CountdownTimer";
-
+import RsvpForm from "./RsvpForm";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -28,20 +28,20 @@ export default function Cover() {
       <div>
         <div data-aos="fade-down" className="flex justify-between px-10 mt-12">
           <Image src="/cover-divider.svg" width={25} height={5} alt="divider" />
-          <h3
-            className={`text-primary-200 text-2xl text-center ${cormorant.className}`}
+
+          <h1
+            data-aos="fade"
+            className={`text-primary-200 text-5xl text-center mt-5 ${alexBrush.className}`}
           >
-            DiannesweredPrayerofGeoff
-          </h3>
+            Geoff & Dianne
+          </h1>
           <Image src="/cover-divider.svg" width={25} height={5} alt="divider" />
         </div>
-
-        <h1
-          data-aos="fade"
-          className={`text-primary-200 text-5xl text-center mt-5 ${alexBrush.className}`}
+        <h3
+          className={`text-F-200 text-2xl text-black-200 text-center text-primary-200 ${cormorant.className}`}
         >
-          Geoff & Dianne
-        </h1>
+          #GEOFFintelytheoneforDIANNE
+        </h3>
 
         <h3 data-aos="fade" className="mt-2 text-center text-primary-200">
           11.30.2024
@@ -52,15 +52,22 @@ export default function Cover() {
         data-aos="fade"
         className="items-center px-6 py-4 mx-6 mt-4 mb-16 border-2 border-white shadow-xl bg-black/60 shadow-black/60 rounded-xl"
       >
+
         {/* Countdown Timer */}
         <CountdownTimer targetTime={new Date("Nov 30, 2024 14:00:00")} />
-
-        <a href="https://calendar.app.google/zD13peaqGK4UTnzMA" target="_blank">
+        <a href="https://calendar.app.google/tsm3d8BrTj8Qpdm99" target="_blank">
           <button className="block px-6 py-2 mx-auto font-semibold transition border rounded-lg hover:bg-primary-900 hover:bg-opacity-20 border-white text-white">
             Save the Date
           </button>
         </a>
+        <a
+          href="#brides"
+
+        >
+
+        </a>
       </div>
+    
     </section>
   );
 }

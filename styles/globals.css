@@ -18,12 +18,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
 :root {
@@ -39,4 +36,101 @@ body {
 html {
   @apply text-white;
   @apply scroll-smooth;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Make sure modal is above other content */
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* components/RsvpForm.module.css */
+.fieldset {
+  width: 100%;
+  border: 2px solid #ccc;
+  /* Optional: Customize border style */
+  border-radius: 8px;
+  /* Optional: Round the corners */
+  padding: 20px;
+  /* Optional: Add some padding */
+  margin-bottom: 20px;
+  /* Space below the fieldset */
+}
+
+.legend {
+  font-weight: bold;
+}
+
+/* Custom radio button styles */
+.customRadio {
+  display: none;
+  /* Hide the default radio button */
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.radioSquare {
+  width: 20px;
+  /* Size of the square */
+  height: 20px;
+  /* Size of the square */
+  border: 2px solid #ccc;
+  /* Border color */
+  border-radius: 4px;
+  /* Optional: Slightly round corners */
+  margin-right: 10px;
+  position: relative;
+}
+
+.customRadio:checked+.radioLabel .radioSquare {
+  background-color: #BD5A18;
+  /* Fill color when checked */
+  border-color: #FFF;
+  /* Border color when checked */
+}
+
+.customRadio:checked+.radioLabel .radioSquare::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  /* Inner square size */
+  height: 16px;
+
+  /* Inner fill color */
+  border-radius: 2px;
+  /* Optional: Slightly round corners */
 }

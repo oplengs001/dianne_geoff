@@ -26,7 +26,7 @@ const vollkorn = Vollkorn_SC({
   weight: ["400", "600", "700", "900"],
 });
 
-export default function ImportantDates({ sesi }) {
+export default function ImportantDates() {
   return (
     <section
       id="dates"

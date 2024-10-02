@@ -9,10 +9,11 @@ const cormorant = Cormorant({
 
 export default function NavMenu() {
   const [menu, setMenu] = useState("home");
+  const [autoScroll, setAutoScroll] = useState(true);
 
   const handleScroll = () => {
     const position = window.scrollY;
-    console.log(position);
+
     if (position < 844) {
       setMenu("home");
       return;
@@ -32,13 +33,14 @@ export default function NavMenu() {
       setMenu("gallery");
       return;
     }
-
     setMenu("others");
+    setAutoScroll(false);
+    clearInterval(interval);
   };
+
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -46,9 +48,8 @@ export default function NavMenu() {
 
   return (
     <section
-      className={`fixed z-40 w-full bottom-0 right-0 left-0 p-2 transition ${
-        menu === "home" ? "opacity-0" : "opacity-100"
-      }`}
+      className={`fixed z-40 w-full bottom-0 right-0 left-0 p-2 transition ${menu === "home" ? "opacity-0" : "opacity-100"
+        }`}
     >
       <div
         className={` bg-secondary-400 shadow shadow-black-900/20 h-full flex justify-evenly rounded-lg ${cormorant.className}`}
@@ -60,9 +61,8 @@ export default function NavMenu() {
           className="flex flex-col items-center justify-center"
         >
           <svg
-            className={`stroke-1 transition mt-1 ${
-              menu === "home" ? "stroke-primary]-900" : "stroke-white"
-            }`}
+            className={`stroke-1 transition mt-1 ${menu === "home" ? "stroke-primary]-900" : "stroke-white"
+              }`}
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -71,9 +71,8 @@ export default function NavMenu() {
             <path d="M9.31645 0.957031C8.95707 1.03516 8.52348 1.21484 8.2227 1.41406C7.93754 1.60156 0.957074 7.43359 0.593793 7.78516C0.328168 8.04297 0.0976991 8.50391 0.0312929 8.89844C-0.144488 9.95312 0.597699 11.0117 1.65629 11.2109L1.91411 11.2578V14.2734C1.91411 17.5938 1.91411 17.5586 2.1602 18.0234C2.32426 18.3398 2.69536 18.7109 3.00004 18.8633C3.4727 19.1016 3.46098 19.1016 6.02348 19.1016H8.35551L8.36723 16.3789L8.37895 13.6523L8.50395 13.3867C8.81645 12.7266 9.52348 12.3398 10.2266 12.4492C10.8907 12.5508 11.4141 13.0156 11.5782 13.6523C11.6329 13.8516 11.6407 14.2617 11.6407 16.4922V19.1016H13.9961C16.5508 19.1016 16.543 19.1016 16.9883 18.8789C17.3164 18.7148 17.6954 18.3203 17.8633 17.9688C17.9375 17.8086 18.0196 17.5703 18.043 17.4453C18.0704 17.293 18.086 16.1914 18.086 14.2383V11.2656L18.3321 11.2188C18.8555 11.1211 19.4414 10.7148 19.6993 10.2695C20.1758 9.45312 20.0586 8.47266 19.4063 7.79688C19.0821 7.46094 12.1329 1.64453 11.7774 1.41406C11.461 1.20703 11.0547 1.03906 10.6641 0.957031C10.3282 0.886719 9.63676 0.886719 9.31645 0.957031ZM10.7813 1.78906C10.9219 1.83594 11.1446 1.9375 11.2774 2.01953C11.6094 2.21875 18.8516 8.30078 18.9922 8.49219C19.336 8.96484 19.2618 9.68359 18.8282 10.1172C18.5625 10.3828 18.3829 10.4453 17.8047 10.4609L17.3047 10.4766L17.2969 13.9219L17.2852 17.3633L17.1563 17.625C17.0039 17.9336 16.793 18.1289 16.4961 18.2422C16.2969 18.3164 16.1914 18.3203 14.3555 18.3203H12.4258L12.4102 15.9492C12.3985 13.3633 12.4063 13.4883 12.168 12.9961C11.7461 12.1406 10.8008 11.5898 9.85161 11.6562C9.45707 11.6797 8.96879 11.8398 8.6602 12.0469C8.35161 12.2539 8.00395 12.6445 7.83989 12.9766C7.57426 13.5 7.57817 13.4766 7.57817 16.0234V18.3242L5.57817 18.3125L3.57426 18.3008L3.40629 18.2109C3.14848 18.0742 2.94145 17.8672 2.82426 17.625L2.71489 17.4023L2.70317 13.9375L2.69536 10.4766L2.19536 10.4609C1.61723 10.4453 1.43754 10.3828 1.17192 10.1172C0.750043 9.69531 0.668012 9.02734 0.976605 8.54297C1.05473 8.41797 2.08598 7.53125 4.67582 5.36328C6.64848 3.71094 8.35942 2.28125 8.47661 2.1875C8.7227 1.99609 9.08598 1.82031 9.40629 1.73828C9.73442 1.65625 10.4532 1.68359 10.7813 1.78906Z" />
           </svg>
           <p
-            className={`text-xs ${
-              menu === "home" ? "text-primary]-900" : "text-white"
-            }`}
+            className={`text-xs ${menu === "home" ? "text-primary]-900" : "text-white"
+              }`}
           >
             Home
           </p>
@@ -84,11 +83,10 @@ export default function NavMenu() {
           className="flex flex-col items-center justify-center"
         >
           <svg
-            className={`mt-1 transition ${
-              menu === "brides"
-                ? "stroke-primary-900 fill-primary-900"
-                : "stroke-white fill-white"
-            }`}
+            className={`mt-1 transition ${menu === "brides"
+              ? "stroke-primary-900 fill-primary-900"
+              : "stroke-white fill-white"
+              }`}
             width="20"
             height="22"
             viewBox="0 0 20 16"
@@ -109,9 +107,8 @@ export default function NavMenu() {
             <path d="M11.8984 9.44918C11.8047 9.5234 11.7969 9.55074 11.7969 9.8359C11.7969 10.1992 11.8594 10.3086 12.0664 10.3125C12.2734 10.3203 12.3828 10.1679 12.3828 9.87496C12.3828 9.60152 12.332 9.46871 12.1992 9.41011C12.0664 9.34761 12.0156 9.35543 11.8984 9.44918Z" />
           </svg>
           <p
-            className={`text-xs ${
-              menu === "brides" ? "text-primary-900" : "text-white"
-            }`}
+            className={`text-xs ${menu === "brides" ? "text-primary-900" : "text-white"
+              }`}
           >
             Bride
           </p>
@@ -122,11 +119,10 @@ export default function NavMenu() {
           className="flex flex-col items-center justify-center"
         >
           <svg
-            className={`mt-1 transition ${
-              menu === "dates"
-                ? "stroke-primary-900 fill-primary-900"
-                : "stroke-white fill-white"
-            }`}
+            className={`mt-1 transition ${menu === "dates"
+              ? "stroke-primary-900 fill-primary-900"
+              : "stroke-white fill-white"
+              }`}
             width="20"
             height="20"
             viewBox="0 0 19 19"
@@ -136,9 +132,8 @@ export default function NavMenu() {
             <path d="M8.97091 14.8886V11.2845C8.97091 11.223 8.90424 11.1855 8.85216 11.2178L8.18757 11.6261C8.08341 11.6897 7.95007 11.6157 7.95007 11.4928V10.8147C7.95007 10.7053 8.00736 10.6032 8.10216 10.547L8.89799 10.0709C8.94695 10.0417 9.00216 10.0261 9.05841 10.0261H9.71049C9.88341 10.0261 10.023 10.1657 10.023 10.3386V14.8876C10.023 15.0605 9.88341 15.2001 9.71049 15.2001H9.28445C9.11049 15.2011 8.97091 15.0615 8.97091 14.8886Z" />
           </svg>
           <p
-            className={`text-xs mt-0.5 ${
-              menu === "dates" ? "text-primary-900" : "text-white"
-            }`}
+            className={`text-xs mt-0.5 ${menu === "dates" ? "text-primary-900" : "text-white"
+              }`}
           >
             Dates
           </p>
@@ -149,11 +144,10 @@ export default function NavMenu() {
           className="flex flex-col items-center justify-center"
         >
           <svg
-            className={`mt-1 transition ${
-              menu === "gallery"
-                ? "stroke-primary-900 fill-primary-900"
-                : "stroke-white fill-white"
-            }`}
+            className={`mt-1 transition ${menu === "gallery"
+              ? "stroke-primary-900 fill-primary-900"
+              : "stroke-white fill-white"
+              }`}
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -166,9 +160,8 @@ export default function NavMenu() {
           </svg>
 
           <p
-            className={`text-xs ${
-              menu === "gallery" ? "text-primary-900" : "text-white"
-            }`}
+            className={`text-xs ${menu === "gallery" ? "text-primary-900" : "text-white"
+              }`}
           >
             Gallery
           </p>
@@ -182,11 +175,10 @@ export default function NavMenu() {
             width="20"
             height="20"
             viewBox="0 0 20 20"
-            className={`mt-1 transition ${
-              menu === "others"
-                ? "stroke-primary-900 fill-primary-900"
-                : "stroke-white fill-white"
-            }`}
+            className={`mt-1 transition ${menu === "others"
+              ? "stroke-primary-900 fill-primary-900"
+              : "stroke-white fill-white"
+              }`}
             xmlns="http://www.w3.org/2000/svg"
           >
             <path d="M1.95312 0.296875C1.24609 0.480469 0.582031 1.01562 0.277344 1.64844C0.046875 2.125 0 2.38281 0 3.26562C0 3.94141 0.0078125 4.02344 0.0742187 4.10547C0.175781 4.23047 0.410156 4.23047 0.511719 4.10547C0.578125 4.02344 0.585937 3.94141 0.585937 3.32031C0.585937 2.51172 0.617187 2.30859 0.800781 1.91797C0.960937 1.58594 1.30859 1.21875 1.625 1.04688C2.07031 0.804688 1.55078 0.820312 10 0.820312C18.4492 0.820312 17.9297 0.804688 18.375 1.04688C18.6914 1.21875 19.0391 1.58594 19.1992 1.91797C19.2734 2.07812 19.3516 2.30078 19.375 2.41797C19.3984 2.55078 19.4141 4.02344 19.4141 6.43359V10.2383L19.5117 10.332C19.6328 10.457 19.7812 10.457 19.9062 10.332L20.0039 10.2344L19.9922 6.26172L19.9805 2.28516L19.8906 2.03125C19.7266 1.58594 19.5625 1.32031 19.2383 0.992188C18.9883 0.738281 18.8594 0.644531 18.5937 0.515625C17.9727 0.210938 18.6914 0.234375 9.98047 0.238281C3.3125 0.238281 2.13672 0.246094 1.95312 0.296875Z" />
@@ -197,9 +189,8 @@ export default function NavMenu() {
           </svg>
 
           <p
-            className={`text-xs ${
-              menu === "others" ? "text-primary-900" : "text-white"
-            }`}
+            className={`text-xs ${menu === "others" ? "text-primary-900" : "text-white"
+              }`}
           >
             Wishes
           </p>
