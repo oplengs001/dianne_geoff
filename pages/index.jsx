@@ -80,7 +80,7 @@ export default function Home() {
           name="description"
           content="Kami memohon doa restu dari Bapak/Ibu/Saudara/(i)"
         /> */}
-        <meta property="og:title" content="Geoffrey & Dianne - dianne-geoff.vercel.app" />
+        <meta property="og:title" content="Geoffrey & Dianne" />
         <meta
           property="og:url"
           content="dianne-geoff.vercel.app"
