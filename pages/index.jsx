@@ -83,12 +83,12 @@ export default function Home() {
         <meta property="og:title" content="Geoffrey & Dianne - dianne-geoff.vercel.app" />
         <meta
           property="og:url"
-          content="httdianne-geoff.vercel.app"
+          content="dianne-geoff.vercel.app"
         />
         {/* <meta property="og:description" content="Kami memohon doa restu dari Bapak/Ibu/Saudara/(i)" /> */}
         <meta
           property="og:image"
-          content="blob:https://www.facebook.com/568fd9df-4b64-4194-8972-c317df79c015"
+          content="https://i.ibb.co/Drjn7ML/568fd9df-4b64-4194-8972-c317df79c015.jpg"
         />
         <meta property="og:type" content="article" />
       </Head>
