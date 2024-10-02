@@ -35,7 +35,7 @@ export default function NavMenu() {
     }
     setMenu("others");
     setAutoScroll(false);
-    clearInterval(interval);
+
   };
 
 

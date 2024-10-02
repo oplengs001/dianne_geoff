@@ -5,7 +5,8 @@ import { ToastContainer } from "react-toastify";
 export default function RsvpForm() {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
-    const [attending, setAttending] = useState('');
+    const [email, setEmail] = useState('');
+    const [attending, setAttending] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,7 +21,7 @@ export default function RsvpForm() {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name, email, attending }),
+            body: JSON.stringify({ name, email, number, attending }),
         });
 
         if (response.ok) {
@@ -30,7 +31,8 @@ export default function RsvpForm() {
 
             setName('');
             setEmail('');
-            setAttending('');
+            setNumber('')
+            setAttending(false);
         } else {
             toast("Ooops, Error submission please try again", {
                 type: "error",
@@ -50,13 +52,20 @@ export default function RsvpForm() {
                         We'd love to know if you’re coming</p></legend>
                     <input
                         type="text"
-                        placeholder="Name"
+                        placeholder="Full Name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full px-2 py-1 mb-4 text-black bg-white border border-gray-200 rounded-lg drop-shadow-xl active:border-primary-900"
                         required
                     />
-                
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full px-2 py-1 mb-4 text-black bg-white border border-gray-200 rounded-lg drop-shadow-xl active:border-primary-900"
+
+                    />
                     <input
                         type="number"
                         placeholder="Phone Number"
@@ -65,14 +74,7 @@ export default function RsvpForm() {
                         className="w-full px-2 py-1 mb-4 text-black bg-white border border-gray-200 rounded-lg drop-shadow-xl active:border-primary-900"
                         required
                     />
-                      <input
-                        type="number"
-                        placeholder="Phone Number"
-                        value={number}
-                        onChange={(e) => setNumber(e.target.value)}
-                        className="w-full px-2 py-1 mb-4 text-black bg-white border border-gray-200 rounded-lg drop-shadow-xl active:border-primary-900"
-                        required
-                    />
+
                     {["yes", "no"].map((option) => (
                         <div key={option}>
                             <input
