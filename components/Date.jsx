@@ -83,7 +83,7 @@ export default function ImportantDates() {
               </p>
             </div>
             <h3
-              className={`my-1 text-4xl font-bold text-secondary-200 ${parisienne.className}`}
+              className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className}`}
               style={{
                 writingMode: "vertical-rl",
                 textOrientation: "mixed",
@@ -121,7 +121,7 @@ export default function ImportantDates() {
             <div>
               {" "}
               <h3
-                className={`my-1 text-4xl font-bold text-secondary-200 ${parisienne.className}`}
+                className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className}`}
                 style={{
                   writingMode: "vertical-rl",
                   textOrientation: "mixed",
@@ -143,13 +143,13 @@ export default function ImportantDates() {
                 <div className="flex flex-col">
                   <p className="text-xl text-primary-900 text-end">Nov 2023</p>
                   <p className="text-sm font-bold text-primary-900 text-end">
-                    Time: 5:00 PM
+                    Time: 3:00 PM
                   </p>
                 </div>
                 <p className="ml-2 text-4xl font-bold text-primary-900">30</p>
               </div>
               <h3
-                className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className} text-shadow`}
+                className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className}`}
                 style={{
                   writingMode: "vertical-rl",
                   textOrientation: "mixed",
