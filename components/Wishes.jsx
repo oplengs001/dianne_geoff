@@ -111,7 +111,7 @@ export default function Wishes() {
     >
       <h2
         data-aos="fade"
-        className={`text-4xl text-center mb-2 ${parisienne.className}`}
+        className={`text-4xl text-center mb-2 ${parisienne.className} text-shadow`}
       >
         Wishes
       </h2>

@@ -26,8 +26,9 @@ export default function Banner({ to }) {
 
   return (
     <div
-      className={`fixed z-50 top-0 right-0 bottom-0 left-0  transition-opacity duration-1000 ${isHide ? "hidden" : "block"
-        } ${isShow ? "opacity-100" : "opacity-0"}`}
+      className={`fixed z-50 top-0 right-0 bottom-0 left-0  transition-opacity duration-1000 ${
+        isHide ? "hidden" : "block"
+      } ${isShow ? "opacity-100" : "opacity-0"}`}
     >
       <div className="absolute z-10 min-w-full min-h-screen bg-black/20"></div>
       <div className="absolute z-0 min-w-full min-h-screen bg-center bg-cover bg-cover-welcome"></div>
@@ -36,7 +37,7 @@ export default function Banner({ to }) {
       >
         <h1
           data-aos="fade"
-          className={`text-white text-5xl text-center mt-5 ${alexBrush.className}`}
+          className={`text-white text-5xl text-center mt-5 ${alexBrush.className} text-shadow`}
         >
           Dianne & Geoff
         </h1>
@@ -66,14 +67,12 @@ export default function Banner({ to }) {
               setTimeout(function () {
                 setIsHide(true);
               }, 1000);
-
             }}
             className={`block w-40 px-6 py-2 mx-auto my-5 text-md font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300`}
           >
             Open Invite
           </a>
           <RsvpForm />
-
         </div>
       </section>
     </div>

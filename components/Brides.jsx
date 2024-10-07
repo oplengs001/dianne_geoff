@@ -48,7 +48,7 @@ export default function Brides() {
     >
       <h2
         data-aos="fade-down"
-        className={`text-4xl text-center mb-4 ${parisienne.className}`}
+        className={`text-4xl text-center mb-4 ${parisienne.className} text-shadow text-shadow`}
       >
         The Bride and Groom
       </h2>
@@ -70,7 +70,7 @@ export default function Brides() {
           className="mt-2 px-7"
         />
         <p
-          className={`text-center mt-2 text-3xl font-weight-bold ${alexBrush.className}`}
+          className={`text-center mt-2 text-3xl font-weight-bold ${alexBrush.className} text-shadow`}
         >
           Dianne Carla Fernandez
         </p>
@@ -101,7 +101,7 @@ export default function Brides() {
           className="px-7"
         />
         <p
-          className={`text-center text-3xl font-weight-bold ${alexBrush.className}`}
+          className={`text-center text-3xl font-weight-bold ${alexBrush.className} text-shadow`}
         >
           Geoffrey Salinas
         </p>

@@ -31,7 +31,7 @@ export default function Gallery() {
     console.log("lightGallery has been initialized");
   };
 
-  const images = Array.from({ length: 10 }, (_, index) => ({
+  const images = Array.from({ length: 12 }, (_, index) => ({
     src: `/img/${index + 1}.jpeg`,
     alt: `Galeri ${index + 1}`,
   }));
@@ -43,7 +43,7 @@ export default function Gallery() {
     >
       <h2
         data-aos="fade-down"
-        className={`text-4xl text-center mb-6 ${parisienne.className}`}
+        className={`text-4xl text-center mb-6 ${parisienne.className} text-shadow`}
       >
         Gallery
       </h2>

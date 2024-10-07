@@ -34,7 +34,7 @@ export default function ImportantDates() {
     >
       <h2
         data-aos="fade-down"
-        className={`text-4xl text-center mb-4 ${parisienne.className}`}
+        className={`text-4xl text-center mb-4 ${parisienne.className} text-shadow`}
       >
         Dates
       </h2>
@@ -83,7 +83,7 @@ export default function ImportantDates() {
               </p>
             </div>
             <h3
-              className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className}`}
+              className={`my-1 text-4xl font-bold text-secondary-200 ${parisienne.className}`}
               style={{
                 writingMode: "vertical-rl",
                 textOrientation: "mixed",
@@ -121,7 +121,7 @@ export default function ImportantDates() {
             <div>
               {" "}
               <h3
-                className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className}`}
+                className={`my-1 text-4xl font-bold text-secondary-200 ${parisienne.className}`}
                 style={{
                   writingMode: "vertical-rl",
                   textOrientation: "mixed",
@@ -149,7 +149,7 @@ export default function ImportantDates() {
                 <p className="ml-2 text-4xl font-bold text-primary-900">30</p>
               </div>
               <h3
-                className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className}`}
+                className={`my-1 text-4xl font-bold text-primary-900 ${parisienne.className} text-shadow`}
                 style={{
                   writingMode: "vertical-rl",
                   textOrientation: "mixed",

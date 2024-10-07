@@ -53,23 +53,22 @@ export default function Cover() {
           <div data-aos="fade-down" className="px-10 mt-12">
             <h1
               data-aos="fade"
-              className={`text-primary-200 text-5xl text-center mt-5 ${alexBrush.className}`}
+              className={`text-6xl text-center mt-5 ${alexBrush.className} text-shadow`}
             >
               Geoff & Dianne
             </h1>
           </div>
         </center>
         <h3
-          className={`text-F-200 text-2xl text-black-200 text-center text-primary-200 ${cormorant.className}`}
+          className={`text-F-200 text-2xl text-black-200 text-center ${cormorant.className} text-shadow`}
         >
           #GEOFFintelytheoneforDIANNE
         </h3>
 
-        <h3 data-aos="fade" className="mt-2 text-center text-primary-200">
+        <h3 data-aos="fade" className="mt-2 text-center text-shadow">
           11.30.2024
         </h3>
       </div>
-
       <div
         data-aos="fade"
         className="relative z-10 items-center px-6 py-4 mx-6 mt-4 mb-16 border-2 border-white shadow-xl bg-black/60 shadow-black/60 rounded-xl"
