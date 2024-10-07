@@ -37,7 +37,7 @@ export default function Banner({ to }) {
       >
         <h1
           data-aos="fade"
-          className={`text-white text-5xl text-center mt-5 ${alexBrush.className} text-shadow`}
+          className={`text-white text-5xl text-center mt-5 ${alexBrush.className}`}
         >
           Dianne & Geoff
         </h1>
