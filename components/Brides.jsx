@@ -61,10 +61,7 @@ export default function Brides() {
         union in holy matrimony.
       </p>
 
-      <div
-        data-aos="fade-left"
-        className="p-1 my-8 bg-contain bg-card-ovi h-80 w-72"
-      >
+      <div data-aos="fade-left" className="p-1 my-8 bg-contain h-80 w-72">
         <Image
           src="/img/bride.jpg"
           width={276}

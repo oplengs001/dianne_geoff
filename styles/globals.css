@@ -18,14 +18,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
+  background: linear-gradient(
+      to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
 }
 
 :root {
   --rsbs-backdrop-bg: rgba(0, 0, 0, 0.6);
-  --rsbs-bg: #8D3333;
+  --rsbs-bg: #8d3333;
   --rsbs-handle-bg: rgba(251, 239, 240, 1);
   --rsbs-max-w: auto;
   --rsbs-ml: env(safe-area-inset-left);
@@ -114,15 +117,15 @@ html {
   position: relative;
 }
 
-.customRadio:checked+.radioLabel .radioSquare {
-  background-color: #BD5A18;
+.customRadio:checked + .radioLabel .radioSquare {
+  background-color: #bd5a18;
   /* Fill color when checked */
-  border-color: #FFF;
+  border-color: #fff;
   /* Border color when checked */
 }
 
-.customRadio:checked+.radioLabel .radioSquare::after {
-  content: '';
+.customRadio:checked + .radioLabel .radioSquare::after {
+  content: "";
   position: absolute;
   top: 2px;
   left: 2px;
@@ -133,4 +136,27 @@ html {
   /* Inner fill color */
   border-radius: 2px;
   /* Optional: Slightly round corners */
+}
+
+/* customScrollbar.css */
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d77636; /* Color of the thumb */
+  border-radius: 5px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darkorange; /* Color of the thumb on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #d1661e; /* Color of the thumb when active */
 }

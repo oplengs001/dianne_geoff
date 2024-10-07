@@ -52,7 +52,6 @@ export default function Cover() {
         data-aos="fade"
         className="items-center px-6 py-4 mx-6 mt-4 mb-16 border-2 border-white shadow-xl bg-black/60 shadow-black/60 rounded-xl"
       >
-
         {/* Countdown Timer */}
         <CountdownTimer targetTime={new Date("Nov 30, 2024 14:00:00")} />
         <a href="https://calendar.app.google/tsm3d8BrTj8Qpdm99" target="_blank">
@@ -60,14 +59,8 @@ export default function Cover() {
             Save the Date
           </button>
         </a>
-        <a
-          href="#brides"
-
-        >
-
-        </a>
+        <a href="#brides"></a>
       </div>
-    
     </section>
   );
 }
