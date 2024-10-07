@@ -41,7 +41,7 @@ export default function ImportantDates() {
 
       <div
         data-aos="fade"
-        className="mx-5 mb-6 bg-center bg-cover bg-cover-dates h-52 rounded-xl"
+        className="mx-5 mb-6 bg-top bg-cover bg-cover-dates h-96 rounded-xl"
       ></div>
 
       <div
@@ -53,7 +53,7 @@ export default function ImportantDates() {
           <div className="flex items-center justify-between pt-8 pl-4 pr-6 mb-4">
             <div className="flex flex-col items-stretch">
               <h3 className="mb-2 text-xl font-medium text-primary-900">
-                Sunday
+                Saturday
               </h3>
               <div className="flex items-center mb-1">
                 <p className="mr-2 text-3xl font-bold text-primary-900">30</p>
@@ -102,15 +102,18 @@ export default function ImportantDates() {
             Open Maps
           </a>
         </div>
-
-        <Image
-          data-aos="fade-down"
-          src="/dates-divider.svg"
-          alt="divider"
-          width={600}
-          height={30}
-          className="px-4 my-6"
-        />
+        <center>
+          {" "}
+          <Image
+            data-aos="fade-down"
+            src="/dates-divider.svg"
+            alt="divider"
+            width={500}
+            // style={{ width: "500%" }}
+            height={100}
+            className="px-4 my-6 center-image"
+          />
+        </center>
 
         {/* 1 Date Info */}
         <div data-aos="fade-right" className="flex flex-col items-stretch mb-6">
@@ -134,7 +137,7 @@ export default function ImportantDates() {
             </div>
             <div className="flex flex-col items-end">
               <h3 className="mb-2 text-2xl font-medium text-end text-primary-900">
-                Sunday
+                Saturday
               </h3>
               <div className="flex items-center justify-end mb-1">
                 <div className="flex flex-col">

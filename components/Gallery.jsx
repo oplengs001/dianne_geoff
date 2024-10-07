@@ -6,7 +6,6 @@ import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import "lightgallery/css/lg-autoplay.css";
 import "lightgallery/css/lg-pager.css";
-
 // import plugins if you need
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
@@ -32,6 +31,11 @@ export default function Gallery() {
     console.log("lightGallery has been initialized");
   };
 
+  const images = Array.from({ length: 10 }, (_, index) => ({
+    src: `/img/${index + 1}.jpeg`,
+    alt: `Galeri ${index + 1}`,
+  }));
+
   return (
     <section
       id="gallery"
@@ -47,58 +51,18 @@ export default function Gallery() {
         onInit={onInit}
         speed={500}
         plugins={[lgZoom, lgThumbnail, lgAutoPlay, lgPager]}
-        elementClassNames="grid grid-cols-6 gap-x-2 gap-y-3"
+        elementClassNames="grid grid-cols-3 gap-x-2 gap-y-3"
         mode="lg-fade"
       >
-        <a data-aos="fade" href="/img/1.jpeg" className="col-span-6">
-          <img
-            alt="Galeri 1"
-            src="/img/1.jpeg"
-            className=" h-full object-cover rounded-lg"
-          />
-        </a>
-        <a data-aos="fade" href="/img/2.jpeg" className="col-span-2">
-          <img
-            alt="Galeri 2"
-            src="/img/2.jpeg"
-            className=" h-full object-cover rounded-lg"
-          />
-        </a>
-        <a data-aos="fade" href="/img/3.jpeg" className="col-span-2">
-          <img
-            alt="Galeri 3"
-            src="/img/3.jpeg"
-            className="h-full object-cover rounded-lg"
-          />
-        </a>
-        <a data-aos="fade" href="/img/4.jpeg" className="col-span-2">
-          <img
-            alt="Galeri 4"
-            src="/img/4.jpeg"
-            className="h-full object-cover rounded-lg"
-          />
-        </a>
-        <a data-aos="fade" href="/img/5.jpeg" className="col-span-3">
-          <img
-            alt="Galeri 5"
-            src="/img/5.jpeg"
-            className="h-full object-cover rounded-lg"
-          />
-        </a>
-        <a data-aos="fade" href="/img/6.jpeg" className="col-span-3">
-          <img
-            alt="Galeri 6"
-            src="/img/6.jpeg"
-            className="h-full object-cover rounded-lg"
-          />
-        </a>
-        <a data-aos="fade" href="/img/7.jpeg" className="col-span-6">
-          <img
-            alt="Galeri 7"
-            src="/img/7.jpeg"
-            className="h-full object-cover rounded-lg"
-          />
-        </a>
+        {images.map((image, index) => (
+          <a key={index} data-aos="fade" href={image.src}>
+            <img
+              alt={image.alt}
+              src={image.src}
+              className="h-full object-cover rounded-lg"
+            />
+          </a>
+        ))}
       </LightGallery>
     </section>
   );

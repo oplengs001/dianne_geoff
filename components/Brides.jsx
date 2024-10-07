@@ -61,13 +61,13 @@ export default function Brides() {
         union in holy matrimony.
       </p>
 
-      <div data-aos="fade-left" className="p-1 my-8 bg-contain h-80 w-72">
+      <div data-aos="fade-left" className="p-1 my-2 bg-contain h-70 w-72">
         <Image
-          src="/img/bride.jpg"
+          src="/img/bridder.jpg"
           width={276}
           height={400}
           alt="rofiqoh"
-          className="mt-6 px-7"
+          className="mt-2 px-7"
         />
         <p
           className={`text-center mt-2 text-3xl font-weight-bold ${alexBrush.className}`}
@@ -78,7 +78,7 @@ export default function Brides() {
 
       <p
         data-aos="fade"
-        className={`px-4 mt-2 text-xs font-light text-center ${poppins.className}`}
+        className={`px-4 text-xs font-light text-center ${poppins.className}`}
       >
         Daughter of <br />
         Domingo Fernandez & Lit Fernandez
@@ -87,19 +87,16 @@ export default function Brides() {
       <Image
         data-aos="fade"
         src="/brides-divider.svg"
-        width={300}
-        height={60}
+        width={276}
+        height={400}
         alt="divider"
       />
 
-      <div
-        data-aos="fade-right"
-        className="p-1 my-4 bg-contain bg-card-wildan h-80 w-72"
-      >
+      <div data-aos="fade-right" className="p-1 my-2 bg-contain h-65 w-72">
         <Image
-          src="/img/groom.jpg"
+          src="/img/groomy.jpg"
           width={276}
-          height={276}
+          height={400}
           alt="rofiqoh"
           className="px-7"
         />

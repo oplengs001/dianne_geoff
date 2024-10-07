@@ -16,7 +16,7 @@ module.exports = {
         "cover-hero": "url('/img/bg-cover.jpg')",
         "cover-welcome": "url('/img/bg-welcome.gif')",
         "cover-end": "url('/img/bg-end.jpg')",
-        "cover-dates": "url('/img/dates.jpg')",
+        "cover-dates": "url('/img/55.jpg')",
         "card-ovi": "url('/img/bg-ovi.png')",
         "card-wildan": "url('/img/bg-wildan.png')",
       },

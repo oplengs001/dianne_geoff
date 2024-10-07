@@ -160,3 +160,7 @@ html {
 ::-webkit-scrollbar-thumb:active {
   background: #d1661e; /* Color of the thumb when active */
 }
+
+.transition-opacity {
+  transition: opacity 0.4s ease-in-out;
+}
