@@ -112,7 +112,7 @@ export default function Brides() {
       >
         Youngest Son of
         <br />
-        Ediwn Salinas & Ofelia Salinas
+        Edwin Salinas & Ofelia Salinas
       </p>
     </section>
   );
