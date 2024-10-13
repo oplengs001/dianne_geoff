@@ -63,7 +63,7 @@ export default function Brides() {
 
       <div data-aos="fade-left" className="p-1 my-2 bg-contain h-70 w-72">
         <Image
-          src="/img/bridder.jpg"
+          src="/img/dianne-bride.jpg"
           width={276}
           height={400}
           alt="rofiqoh"
