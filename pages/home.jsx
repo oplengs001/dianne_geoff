@@ -11,7 +11,7 @@ import Head from "next/head";
 import { Poppins } from "next/font/google";
 import { useRouter } from "next/router";
 import { ToastContainer } from "react-toastify";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 // Toastify CSS
 import "react-toastify/dist/ReactToastify.css";
@@ -30,15 +30,14 @@ const poppins = Poppins({
 
 export default function HomePage() {
   const [audio, setAudio] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
     AOS.init({
       duration: 500,
     });
     setAudio(new Audio("/music/song.mp3"));
-  }, []); // Dependency on isScrolling
-  // audio?.play();
-  const router = useRouter();
-  const { to, sesi } = router.query;
+  }, []);
+  audio?.play();
 
   return (
     <div className={`${poppins.className} text-white`}>

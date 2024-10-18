@@ -75,12 +75,11 @@ export default function Cover() {
       >
         {/* Countdown Timer */}
         <CountdownTimer targetTime={new Date("Nov 30, 2024 14:00:00")} />
-        <a href="https://calendar.app.google/tsm3d8BrTj8Qpdm99" target="_blank">
+        <a href="https://calendar.app.google/Zx7S6E1EzFdbdkLV6" target="_blank">
           <button className="block px-6 py-2 mx-auto font-semibold transition border rounded-lg hover:bg-primary-900 hover:bg-opacity-20 border-white text-white">
             Save the Date
           </button>
         </a>
-        <a href="#brides"></a>
       </div>
     </section>
   );

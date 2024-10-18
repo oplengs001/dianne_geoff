@@ -68,7 +68,7 @@ export default function Banner({ to }) {
                 setIsHide(true);
               }, 1000);
             }}
-            className={`block w-40 px-6 py-2 mx-auto my-5 text-md font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300`}
+            className={`block w-40 px-6 py-2 mx-auto my-5 text-md font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300  shineAnimation`}
           >
             Open Invite
           </a>
