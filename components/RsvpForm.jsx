@@ -101,7 +101,7 @@ export default function RsvpForm() {
             className={`block w-100 px-6 py-2 mx-auto my-5 text-sm font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300`}
             type="submit"
           >
-            Send Your Response
+            Submit RSVP
           </button>
         </fieldset>
       </form>

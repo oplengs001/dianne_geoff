@@ -59,7 +59,7 @@ export default function Gallery() {
             <img
               alt={image.alt}
               src={image.src}
-              className="h-full object-cover rounded-lg"
+              className="object-cover rounded-lg w-full h-64"
             />
           </a>
         ))}
