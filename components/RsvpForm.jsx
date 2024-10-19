@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { ToastContainer } from "react-toastify";
-
+import { useRouter } from "next/router";
 export default function RsvpForm() {
   const [name, setName] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [attending, setAttending] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,6 +37,10 @@ export default function RsvpForm() {
       setNumber("");
       setAttending(false);
       setSubmitting(false);
+
+      setTimeout(() => {
+        router.push("home");
+      }, 4000);
     } else {
       setSubmitting(false);
       toast("Ooops, Error submission please try again", {
