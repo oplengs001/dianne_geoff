@@ -74,6 +74,7 @@ export default function RsvpForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full px-2 py-1 mb-4 text-black bg-white border border-gray-200 rounded-lg drop-shadow-xl active:border-primary-900"
+            required
           />
           <input
             type="number"

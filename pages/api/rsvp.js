@@ -63,7 +63,9 @@ export default async function handler(req, res) {
       const coupleEmailOption = {
         from: process.env.EMAIL_USER,
         to: ["fernandezdianne14@gmail.com", "oplengs@gmail.com"],
-        subject: "Your RSVP Confirmation for Our Wedding!",
+        subject: `${name} is ${
+          attending === "yes" ? "attending" : "not attending"
+        }  Your RSVP Confirmation for Our Wedding!`,
         html: `
             <p>Hi Love! <b>${name}</b> is <b>${
           attending === "yes" ? "attending" : "not attending"
