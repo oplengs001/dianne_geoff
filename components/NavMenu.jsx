@@ -152,7 +152,7 @@ export default function NavMenu() {
                 menu === "dates" ? "text-primary-900" : "text-white"
               }`}
             >
-              Dates
+              Details
             </p>
           </a>
           <a

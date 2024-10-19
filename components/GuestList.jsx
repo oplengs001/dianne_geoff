@@ -18,6 +18,23 @@ const parisienne = Parisienne({
 
 export default function Guests() {
   const [rsvps, setRsvps] = useState([]);
+  const downloadCSV = (guests) => {
+    const csvContent =
+      "data:text/csv;charset=utf-8," +
+      ["name,number,email,attending"] // Header
+        .concat(
+          guests.map((e) => `${e.name},${e.number},${e.email},${e.attending}`),
+        )
+        .join("\n");
+
+    const encodedUri = encodeURI(csvContent);
+    const link = document.createElement("a");
+    link.setAttribute("href", encodedUri);
+    link.setAttribute("download", "attendees.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "rsvps"), (snapshot) => {
@@ -38,10 +55,13 @@ export default function Guests() {
       >
         Guest List
       </h2>
-      <p data-aos="fade" className="mb-6 text-xs text-center">
+      <p data-aos="fade" className=" text-xs text-center">
         Guest RSVP
       </p>
-
+      <p data-aos="fade" className="mb-2 text-md text-center">
+        Attending: {rsvps.filter((person) => person.attending === "yes").length}
+      </p>
+      <button onClick={() => downloadCSV(rsvps)}>Download List</button>
       <div>
         {rsvps.map((rsvp) => (
           <div

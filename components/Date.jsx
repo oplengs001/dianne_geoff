@@ -1,29 +1,11 @@
-import {
-  Grand_Hotel,
-  Parisienne,
-  Poppins,
-  Vollkorn_SC,
-  Alex_Brush,
-} from "next/font/google";
+import { Parisienne } from "next/font/google";
 import Image from "next/image";
-
-const grandHotel = Grand_Hotel({
-  subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 const parisienne = Parisienne({
   subsets: ["latin"],
   weight: ["400"],
   display: "swap",
   adjustFontFallback: false,
-});
-
-const vollkorn = Vollkorn_SC({
-  subsets: ["latin"],
-  weight: ["400", "600", "700", "900"],
 });
 
 export default function ImportantDates() {
