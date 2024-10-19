@@ -65,7 +65,7 @@ export default async function handler(req, res) {
         to: ["fernandezdianne14@gmail.com", "oplengs@gmail.com"],
         subject: `${name} is ${
           attending === "yes" ? "attending" : "not attending"
-        }  Your RSVP Confirmation for Our Wedding!`,
+        }  our Wedding!`,
         html: `
             <p>Hi Love! <b>${name}</b> is <b>${
           attending === "yes" ? "attending" : "not attending"
