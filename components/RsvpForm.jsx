@@ -4,12 +4,14 @@ import { ToastContainer } from "react-toastify";
 
 export default function RsvpForm() {
   const [name, setName] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const [number, setNumber] = useState("");
   const [email, setEmail] = useState("");
   const [attending, setAttending] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitting(true);
     if (!attending) {
       toast("Please select whether you will attend.", {
         type: "warning",
@@ -33,7 +35,9 @@ export default function RsvpForm() {
       setEmail("");
       setNumber("");
       setAttending(false);
+      setSubmitting(false);
     } else {
+      setSubmitting(false);
       toast("Ooops, Error submission please try again", {
         type: "error",
       });
@@ -96,12 +100,19 @@ export default function RsvpForm() {
               </label>
             </div>
           ))}
-
           <button
-            className={`block w-100 px-6 py-2 mx-auto my-5 text-sm font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300`}
+            className={`relative block px-6 py-2 mx-auto my-5 text-sm font-semibold text-center text-black transition bg-white rounded-lg hover:bg-gray-300`}
             type="submit"
+            disabled={submitting}
           >
-            Submit RSVP
+            {submitting ? (
+              <>
+                <span>Sending RSVP</span>
+                <span className="inline-block ml-2 w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin"></span>
+              </>
+            ) : (
+              "Submit RSVP"
+            )}
           </button>
         </fieldset>
       </form>

@@ -69,7 +69,7 @@ export default function Wishes() {
   return (
     <section
       id="wishes"
-      className={`flex flex-col items-stretch py-12 bg-primary-900 px-6 ${poppins.className}`}
+      className={`flex flex-col items-stretch py-6 bg-primary-900 px-6 ${poppins.className}`}
     >
       <h2
         data-aos="fade"

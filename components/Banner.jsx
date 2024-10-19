@@ -39,13 +39,13 @@ export default function Banner({ to }) {
           data-aos="fade"
           className={`text-white text-5xl text-center mt-5 ${alexBrush.className}`}
         >
-          Dianne & Geoff
+          Geoff & Dianne
         </h1>
         <p
           data-aos="fade"
           className={`text-white text-2xl text-center  ${cormorant.className}`}
         >
-          #DiannesweredprayerofGeoff
+          #DIANNEsweredprayerofGEOFFREY
         </p>
         <h3 data-aos="fade" className={`text-white text-sm text-center`}>
           11.30.2024

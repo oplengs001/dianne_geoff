@@ -19,6 +19,7 @@ import "react-toastify/dist/ReactToastify.css";
 // AOS
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Entourage from "@/components/Entourage";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -75,11 +76,11 @@ export default function HomePage() {
         {/* DATE */}
         <ImportantDates />
 
+        {/* DATE */}
+        <Entourage />
+
         {/* GALLERT */}
         <Gallery />
-
-        {/* HADIAH & BUKU TAMU */}
-        <Gift />
 
         {/* UCAPAN DOA */}
         <Wishes />

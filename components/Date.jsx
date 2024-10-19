@@ -36,13 +36,8 @@ export default function ImportantDates() {
         data-aos="fade-down"
         className={`text-4xl text-center mb-4 ${parisienne.className} text-shadow`}
       >
-        Dates
+        Place and Time
       </h2>
-
-      <div
-        data-aos="fade"
-        className="mx-5 mb-6 bg-top bg-cover bg-cover-dates h-96 rounded-xl"
-      ></div>
 
       <div
         data-aos="fade-down"
@@ -64,7 +59,10 @@ export default function ImportantDates() {
                     Santa Clara, City of Sto. Tomas, Batangas
                   </p>
                   <p className="text-sm font-bold text-primary-900 text-start">
-                    Time : 2:00PM
+                    Call-time : 1:00PM
+                  </p>
+                  <p className="text-sm font-bold text-primary-900 text-start">
+                    Ceremony : 2:00PM
                   </p>
                 </div>
               </div>
@@ -103,7 +101,6 @@ export default function ImportantDates() {
           </a>
         </div>
         <center>
-          {" "}
           <Image
             data-aos="fade-down"
             src="/dates-divider.svg"
@@ -143,7 +140,7 @@ export default function ImportantDates() {
                 <div className="flex flex-col">
                   <p className="text-xl text-primary-900 text-end">Nov 2023</p>
                   <p className="text-sm font-bold text-primary-900 text-end">
-                    Time: 3:00 PM
+                    Time : 3:30 PM
                   </p>
                 </div>
                 <p className="ml-2 text-4xl font-bold text-primary-900">30</p>
@@ -181,6 +178,25 @@ export default function ImportantDates() {
           </a>
         </div>
       </div>
+      <br />
+      <div
+        data-aos="fade-down"
+        className="mx-5 bg-white drop-shadow rounded-xl"
+      >
+        <div data-aos="fade-left" className="flex flex-col items-stretch">
+          <center>
+            <img
+              src={"/img/details.jpeg"}
+              className="object-cover rounded-lg w-full h-full"
+            />
+          </center>
+        </div>
+      </div>
+      <br />
+      <div
+        data-aos="fade"
+        className="mx-5 bg-top bg-cover bg-cover-dates h-96 rounded-xl"
+      ></div>
     </section>
   );
 }

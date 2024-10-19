@@ -39,7 +39,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="flex flex-col items-stretch py-12 bg-primary-900 px-6"
+      className="flex flex-col items-stretch py-6 bg-primary-300 px-6"
     >
       <h2
         data-aos="fade-down"
