@@ -120,7 +120,7 @@ export default function ImportantDates() {
               </h3>
               <div className="flex items-center justify-end mb-1">
                 <div className="flex flex-col">
-                  <p className="text-xl text-primary-900 text-end">Nov 2023</p>
+                  <p className="text-xl text-primary-900 text-end">Nov 2024</p>
                   <p className="text-sm font-bold text-primary-900 text-end">
                     Time : 3:30 PM
                   </p>
